@@ -3,6 +3,10 @@
 
 Materiais utilizados no Minicurso de Bootstrap e jQuery ministrado na PUC Minas, campus Poços de Caldas.
 
+### Materiais
+- estrutura-basica.zip : estrutura básica para desenvolver com bootstrap e jQuery.
+- img.zip : diretório com as imagens utilizadas no site.
+
 ### Referêcias
 - https://getbootstrap.com
 - http://jquery.com
