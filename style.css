@@ -1,0 +1,45 @@
+/* css do menu */
+.nav-item a:hover{
+	color: #00FF7F !important;
+}
+
+.dropdown-item{
+	color: white !important;
+}
+
+.nav-item .dropdown-menu a:hover{
+	color: #00FF7F !important;
+	background-color: #696969;
+}
+
+/* css do carrossel */
+.carrossel{
+	max-height: 550px;
+}
+
+@media (min-width: 768px){
+	
+	.carousel-caption h1{
+		font-size: 80px;
+	}
+	
+}
+
+/* css do icone */
+.cor-verde{
+	color: #00FF7F;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
