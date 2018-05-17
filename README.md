@@ -8,7 +8,7 @@ Materiais utilizados no Minicurso de Bootstrap e jQuery ministrado na PUC Minas,
 - img.zip : diretório com as imagens utilizadas no site.
 - aula-dia-1.zip : arquivos da primeira aula - segunda-feira 14/05/18.
 - aula-dia-2.zip : arquivos da segunda aula - terça-feira 15/05/18.
-
+- aula-dia-3.zip : arquivos da terceira aula - quarta-feira 16/05/18.
 - index.html : códigos da página html usados até o momento no curso.
 - style.css : códigos de estilos css usados até o momento no curso.
 
