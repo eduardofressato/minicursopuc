@@ -154,6 +154,50 @@
 	</div>
 	<!-- fim das imagens -->
 	
+	<!-- botao que chama modal -->
+	<div class="jumbotron">
+		<div class="container">
+			<div class="row text-center">
+				<div class="col-12">
+					<h1 class="display-4"> <i class="fas fa-play cor-verde"></i>Assine agora!</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 text-center mt-3">
+					<!-- botao -->
+					<button style="height:150px;" class="btn btn-lg fundo-verde" data-toggle="modal" data-target="#assmodal">Assine agora</button>
+					<!-- imagem -->
+					<a data-toggle="modal" data-target="#assmodal" href="#"><img src="img/slide02.jpg" height="150px"></a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- inicio do conteudo do modal -->
+	<div class="modal fade" id="assmodal" tabindex="-1" role="dialog">
+		<!-- modal-lg : para modal grande -->
+		<!-- modal-dialog-centered : centraliza o modal -->
+		<div class="modal-dialog modal-dialog-centered " role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1>Assine agora</h1>
+				</div>
+				<div class="modal-body">
+					<p>Não perca tempo...</p>
+					<img src="img/slide02.jpg" class="img-fluid">
+				</div>
+				<div class="modal-footer">
+					<button class="btn fundo-verde"data-dismiss="modal">Fechar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	
+	
 	<!-- inicio do formulario -->
 	<div class="container">
 		<div class="row text-center my-5">
@@ -163,7 +207,7 @@
 			</div>
 		</div>
 		
-		<div class="row">
+		<div class="row justify-content-center">
 			<div class="col-sm-12 col-md-10">
 				<form>
 					<div class="form-group">
@@ -198,16 +242,133 @@
 					<textarea class="form-control"rows="5" id="inpmsg"></textarea>
 				</div>
 				
-				<div class="form-group">
+				<div class="form-check">
 					<input class="form-check-input"type="checkbox" value="" id="check01"></input>
 					<label class="form-check-label" for="check01">Deseja receber nossas mensagens?</label>
 				</div>
-        
+				
+				<div class="form-check">
+					<input class="form-check-input" type="radio" value="" id="check02"></input>
+					<label class="form-check-label" for="check02" >Deseja receber nossas mensagens?</label>
+				</div>
+				
+				<div class="form-group">
+					<label for="inpemp">Conte um pouco da sua necessidade:</label>
+					<textarea class="form-control"rows="3" id="inpemp"></textarea>
+				</div>
+				
+				<button type="submit" class="btn btn-lg mt-3 fundo-verde">Enviar mensagem</button>
+				
+					
 				</form>
 			</div>
 		</div>
+	</div>
+	<!-- fim do formulario -->
+	
+	<!-- inicio do navpills e jumbotron -->
+	<div class="jumbotron mt-4" id="estilos">
+	<div class="container">
+	
+		<!-- cabeçalho -->
+		<div class="row text-center">
+			<div class="col-12">
+				<h1 class="display-4"><i class="far fa-play-circle cor-verde"></i> Todos estilos musicais</h1>
+			
+			</div>
+		</div>
 		
+		<!-- inicio navpills -->
+		<nav class="nav nav-pills nav-fill">
+			<a class="nav-item nav-link active" role="tab" href="#tab01" data-toggle="pill" >Sertanejo</a>
+			<a class="nav-item nav-link" role="tab" href="#tab02" data-toggle="pill">Pagode</a>
+			<a class="nav-item nav-link" role="tab" href="#tab03" data-toggle="pill">MBP</a>
+			<a class="nav-item nav-link" role="tab" href="#tab04" data-toggle="pill">Rock</a>
+		</nav>
+		<!-- inicio do conteudo do navpills -->
 		
+		<div class="tab-content">
+			<!-- conteudo botao 01 -->
+			<div class="tab-pane fade show active" id="tab01" role="tabpanel">
+					<div class="row mt-2">
+						<div class="col-sm-12 col-md-6 embed-responsive embed-responsive-16by9">
+							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ghFocBG78FA"></iframe>
+						</div>
+						<div class="col-sm-12 col-md-6">
+							<h3>Jorge e Mateus</h3>
+							<p>Jorge & Mateus é uma dupla de música sertaneja Brasileira, formada pelos cantores goianos Jorge Alves Barcelos e Mateus Pedro Liduário de Oliveira, que já venderam em média 6 milhões de cópias.</p>
+						</div>
+					</div>
+				</div>
+				<!-- conteudo botao 02 -->
+				<div class="tab-pane fade show " id="tab02" role="tabpanel">
+					<div class="row mt-2">
+						<div class="col-sm-12 col-md-6 embed-responsive embed-responsive-16by9">
+							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/aKBwce1ajD0"></iframe>
+						</div>
+						<div class="col-sm-12 col-md-6">
+							<h3>Zeca Pagodinho</h3>
+							<p>Zeca Pagodinho, nome artístico de Jessé Gomes da Silva Filho, é um cantor e compositor brasileiro. Gravou mais de 20 discos e é considerado um grande nome do gênero samba e pagode.</p>
+						</div>
+					</div>
+				</div>
+				<!-- conteudo botao 03 -->
+				<div class="tab-pane fade show " id="tab03" role="tabpanel">
+					<div class="row mt-2">
+						<div class="col-sm-12 col-md-6 embed-responsive embed-responsive-16by9">
+							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/j9UbE1slI-Q"></iframe>
+						</div>
+						<div class="col-sm-12 col-md-6">
+							<h3>Caetano Veloso</h3>
+							<p>Caetano Emanuel Viana Teles Veloso é um músico, produtor, arranjador e escritor brasileiro. Com uma carreira que ultrapassa cinco décadas.</p>
+						</div>
+					</div>
+				</div>
+				<!-- conteudo botao 04 -->
+				<div class="tab-pane fade show " id="tab04" role="tabpanel">
+					<div class="row mt-2">
+						<div class="col-sm-12 col-md-6 embed-responsive embed-responsive-16by9">
+							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ghFocBG78FA"></iframe>
+						</div>
+						<div class="col-sm-12 col-md-6">
+							<h3>Jorge e Mateus</h3>
+							<p>Jorge & Mateus é uma dupla de música sertaneja Brasileira, formada pelos cantores goianos Jorge Alves Barcelos e Mateus Pedro Liduário de Oliveira, que já venderam em média 6 milhões de cópias.</p>
+						</div>
+					</div>
+				</div>
+			
+		
+		</div>
+	</div>
+	</div>
+	
+	<!-- inicio cards -->
+	
+	<div class="container" id="opinioes">
+		<div class="row text-center my-5">
+			<div class="col-12">
+				<h1 class="display-4"><i class="fas fa-users cor-verde"></i> Opiniões dos usuários</h1>
+			</div>
+		</div>
+		<!-- inicio dos cards -->
+		<div class="card-columns">
+			
+			<!-- card 01 -->
+			<div class="card">
+				<div class="card-body">
+					Este texto é um conteudo do card.
+				</div>
+			</div>
+			<!-- card 02 -->
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">Ótima plataforma</h5>
+					<h6 class="card-subtitle">Utilizo várias vezes ao dia.</h6>
+					<p class="card-text">Consigo escutar todas as minhas músicas</p>
+				</div>
+			</div>
+			
+		</div>
 	</div>
 	
     <script src="js/jquery-3.3.1.js"></script>
