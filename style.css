@@ -30,16 +30,18 @@
 	color: #00FF7F;
 }
 
+/* css do formulario */
+.fundo-verde{
+	color: #000;
+	background-color: #00FF7F;
+}
 
+/* css do navpills */
+.nav-pills a{
+	color: #000;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+.nav-pills a.active{
+	color: #000 !important;
+	background-color: #00FF7F !important;
+}
