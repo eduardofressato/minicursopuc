@@ -13,6 +13,7 @@ Materiais utilizados no Minicurso de Bootstrap e jQuery ministrado na PUC Minas,
 - index.html : códigos da página html usados no curso.
 - style.css : códigos de estilos css usados no curso.
 - scripts.js : códigos javascript usados no curso.
+- exemplos-jquery.html : códigos dos exemplos jquery usados no curso.
 
 ### Referêcias
 - https://getbootstrap.com
