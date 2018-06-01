@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fontawesome-all.css">
+
+    <title>jQuery</title>
+	<style type="text/css">
+		.marca1{
+			background-color: orange;
+			padding: 20;
+		}
+		.marca2{
+			background-color: red;
+			padding: 20;
+		}
+	</style>
+  </head>
+  <body>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+	<div class="container" >
+	
+		<!-- tipos de seletores -->
+		<div class="container">
+			<h2><a href="http://api.jquery.com" target="_blank">Doc: api.jquery.com</a></h2>
+			<hr>
+			<h2>Tipos de seletores:</h2>
+			<h5>$('#id').funcao()</h5>
+			<h5>$('.class').funcao()</h5>
+			<h5>$('tag').funcao()</h5>
+			<hr>
+		</div>
+		
+		<!-- exemplo do uso do click -->
+		<div class="container">
+			<h2>Evento clique</h2>
+			<button class="btn btn-primary" id="clique">clique</button>
+			<hr>
+		</div>
+		<script>
+		//explicar a funcao ready
+		$(document).ready( function(){
+			//conteudo jquery	
+			$("#clique").click( function(){
+				alert("Testando clique do botao");
+			});
+		});
+		</script>
+		<!-- eventos mouse -->
+		<div class="container">
+			<h2>Tipos de eventos do mouse</h2>
+			<button class="btn btn-primary" id="mdown">mouse down</button>
+			<button class="btn btn-primary" id="dbclique">db clique</button>
+			<button class="btn btn-primary" id="mover">mouse over</button>
+			<button class="btn btn-primary" id="mout">mouse out</button>
+			<hr>
+		</div>
+		<script>
+			$(document).ready(function(){
+				$('#mdown').mousedown(function(){
+					alert("dispara quando recebe o clique (sem soltar)");
+				});
+				//mouseup
+				
+				$('#dbclique').dblclick(function(){
+					alert("db clique");
+				});
+				
+				$('#mover').mouseover(function(){
+					alert("mouse passou em cima do botao(elemento)");
+				});
+				
+				$('#mout').mouseout(function(){
+					alert("mouse saiu do elemento");
+				});
+			});
+		</script>
+		
+		<!-- eventos teclado -->
+		<div class="container">
+			<h2>Tipos de eventos do teclado</h2>
+			<p>keydown</p>
+			<input class="form-control" id="key"></input>
+			<p id="exibe"><p>
+			
+			<p>keyup</p>
+			<input class="form-control" id="key2"></input>
+			<p id="exibe2"><p>
+			<hr>
+		</div>
+		<script>
+			$(document).ready(function(){
+				$('#key').keydown(function(){
+					//alert("qualquer tecla foi pressionada");
+					var teclado = $(this).val();
+					$('#exibe').html(teclado);
+				});
+				
+				$('#key2').keyup(function(){
+					//alert("qualquer tecla foi pressionada");
+					var teclado = $(this).val();
+					$('#exibe2').html(teclado);
+				});
+			});
+		</script>
+		
+		<!-- eventos teclado -->
+		<div class="container">
+			<h2>Inserção de conteúdo</h2>
+			<input id="ins" class="form-control mb-3"></input>
+			<button id="append" class="btn btn-primary">append</button> <!-- insere ao final -->
+			<button id="appendto" class="btn btn-primary">append to</button> <!-- insere o conteudo que ta chamando -->
+			<button id="prepend" class="btn btn-primary">prepend</button>
+			<button id="prependto" class="btn btn-primary">prepend to</button>
+			<button id="html" class="btn btn-primary">html</button>
+			<button id="text" class="btn btn-primary">text</button>
+			
+			<p class="my-3" id="exibe3"></p>
+			<hr>
+		</div>
+		<script>
+			$(document).ready(function(){
+				$('#append').click(function(){
+					$('#exibe3').append($('#ins').val());
+				});
+				
+				$('#appendto').click(function(){
+					$(this).appendTo('#exibe3');
+				});
+				
+				$('#prepend').click(function(){
+					$('#exibe3').prepend($('#ins').val());
+				});
+				
+				$('#prependto').click(function(){
+					$(this).prependTo('#exibe3');
+				});
+				
+				$('#html').click(function(){
+					$('#exibe3').html($('#ins').val());
+				});
+				
+				$('#text').click(function(){
+					$('#exibe3').text($('#ins').val());
+				});
+			});
+		</script>
+		
+		<!-- eventos teclado -->
+		<div class="container">
+			<h2>mostrar/esconder elementos</h2>
+			<p>hide, show, fadeOut, fadeIn, fadeToggle, slideDown, slideUp, slideToggle</p>
+			
+			<button onclick="$('#imagem').hide(1000);" class="btn btn-primary">hide</button>
+			<button onclick="$('#imagem').show(1000);" class="btn btn-primary">show</button>
+			
+			<button onclick="$('#imagem').fadeOut(5000);" class="btn btn-primary">fadeOut</button>
+			<button onclick="$('#imagem').fadeIn();" class="btn btn-primary">fadeIn</button>
+			<button onclick="$('#imagem').fadeToggle();" class="btn btn-primary">fadeToggle</button>
+			
+			<button onclick="$('#imagem').slideUp();" class="btn btn-primary">slideUp</button>
+			<button onclick="$('#imagem').slideDown();" class="btn btn-primary">slideDown</button>
+			<button onclick="$('#imagem').slideToggle();" class="btn btn-primary">slideTogle</button>
+			
+			<button id="testeb" class="btn btn-primary">slideToggle</button>
+			<hr>
+			<img id="imagem" src="img/slide01.jpg" width="250px">
+			<hr>
+		</div>
+		<script>
+			$(document).ready(function(){
+				$('#testeb').click(function(){
+					$('#imagem').slideToggle();
+				});
+			});
+		</script>
+		
+		<!-- animações -->
+		<div class="container">
+			<h2>Animações</h2>
+			<p>$(selector).animate({params},speed,callback);</p>
+			
+			<button id="aumentar" class="btn btn-primary">Aumentar</button>
+			<button id="lef" class="btn btn-primary">left</button>
+			<button id="aumtext" class="btn btn-primary">aumentar texto</button>
+			<button id="aumdiv" class="btn btn-primary">aumentar div e texto</button>
+			
+			<hr>
+			<p id="anitext">Spotily</p>
+			<div id="quadro2" style="border: 1px solid green; background-color:white; width:100px; height:100px;">Hello</div>
+			<div id="quadro" style="background-color:red; width:100px; height:100px; position:relative;"></div>
+			<hr>
+		</div>
+		<script>
+			$(document).ready(function(){
+				$('#aumentar').click(function(){
+					$('#quadro').animate({width:'80%'}, 5000);
+				});
+				
+				$('#lef').click(function(){
+					$("#quadro").animate({
+						left: "+=50",
+						opacity: '0.5',
+					});
+				});
+
+				$('#aumtext').click(function(){
+					$("#anitext").animate({
+						fontSize: "+=10",
+					});
+				});
+				
+				$('#aumdiv').click(function(){
+					$("#quadro2").animate({
+						fontSize: "+=10",
+						marginLeft: "0.6in",
+						fontSize: "3em",
+						borderWidth: "10px",
+						width: '300px',
+						left: '+=10'
+					});
+				});
+			});
+		</script>
+		
+		<!-- formularios -->
+		<div class="container">
+			<h2>Formulários</h2>
+			<p>focus</p>
+			<input id="focus" class="form-control"></input>
+			<p>blur</p>
+			<input id="blur" class="form-control"></input>
+			<p>change</p>
+			<select id="change" class="form-control">
+				<option>Esolha 1</option>
+				<option>Esolha 2</option>
+				<option>Esolha 3</option>
+				<option>Esolha 4</option>
+			</select>
+			<h3 id="escolha"></h3>
+			<hr>
+		</div>
+		<script>
+			$(document).ready(function(){
+				$('#focus').focus(function(){
+					$('#focus').css("background-color", "#DDD");
+				});
+				
+				$('#blur').blur(function(){
+					$('#blur').css("background-color", "red");
+				});
+				
+				$('#change').change(function(){
+					//alert("o input foi alterado");
+					$('#escolha').html($('#change').val());
+				});
+			});
+		</script>
+		
+		<!-- css e classes -->
+		<div class="container">
+			<h2>CSS e Classes</h2>
+			<!-- quadro -->
+			
+			<button id="pegarcss" class="btn btn-primary">Pegar CSS</button>
+			<p id="propcss"><p>
+			<hr>
+			
+			<button id="addc" class="btn">Add Class</button>
+			<button id="removec" class="btn">Remove Class</button>
+			<button id="togglec" class="btn">Toggle Class</button>
+			<hr>
+		</div>
+		<script>
+			$(document).ready(function(){
+				$('#pegarcss').click(function(){
+					var texto = []
+					var valores = $('#quadro').css(["width","background-color"]);
+					
+					$.each( valores, function(prop, value){
+						texto.push( prop + ":" + value);
+					});
+					
+					$('#propcss').text(texto);
+				});
+				
+				$('#addc').click(function(){
+					$(this).addClass("btn-warning");
+				});
+				
+				$('#removec').click(function(){
+					$('#addc').removeClass("btn-warning");
+				});
+				
+				$('#togglec').click(function(){
+					$(this).toggleClass("btn-info");
+				});
+
+			});
+		
+		</script>
+		
+		<!-- ajax -->
+		<div class="container">
+			<h2>Ajax</h2>
+	
+		<div style="height:500px;"></div>
+
+	</div>
+  </body>
+</html>
