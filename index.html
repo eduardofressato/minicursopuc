@@ -11,368 +11,458 @@
     <title>Spotily</title>
   </head>
   <body>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-	<div class="container">
-		<a class="navbar-brand my-2" href="">
-		<img src="img/logo-spotily.png" height="40px">
-		</a>
-		
-		<button class="navbar-toggler" type="button"data-toggle="collapse" data-target="#navbarSite">
-		<spam class="navbar-toggler-icon"></spam>
-		</button>
-		
-		<div class="collapse navbar-collapse" id="navbarSite" >
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item active">
-					<a href="#" class="nav-link">Home</a>
-				</li>
-				<li class="nav-item">
-					<a href="#" class="nav-link">Sobre</a>
-				</li>
-				<li class="nav-item">
-					<a href="#" class="nav-link">Estilos</a>
-				</li>
-				<li class="nav-item">
-					<a href="#" class="nav-link">Opiniões</a>
-				</li>
-				<li class="nav-item">
-					<a href="#" class="nav-link">Contato</a>
-				</li>
-			</ul>
-			<!-- menu dropdown -->
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="navDrop">Redes Socias</a>
-					<!-- conteudo do dropdown -->
-					<div class="dropdown-menu bg-dark">
-						<a class="dropdown-item" href="">Facebook</a>
-						<a class="dropdown-item" href="">Instagram</a>
-						<a class="dropdown-item" href="">Twitter</a>
-					
-					</div>
-				</li>
-			</ul>
-			<!-- formulario de busca -->
-			<form class="form-inline">
-				<input class="form-control ml-lg-3 mr-2" type="search"placeholder="Buscar..."></input>
-				<button class="btn btn-light"><i class="fas fa-search"></i></button>
-			</form>
+  
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="top">
+		<div class="container">
+			<a class="navbar-brand my-2" href="#" ><img src="img/logo-spotily.png" height="40px"></a>
 			
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
+				<spam class="navbar-toggler-icon"><spam>
+			</button>
+			
+			<div class="collapse navbar-collapse" id="navbarSite"> 
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a href="#" class="nav-link">Home</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" id="menusobre" class="nav-link">Sobre</a>
+					</li>
+					<li class="nav-item">
+						<a href="#estilos" class="nav-link">Estilos</a>
+					</li>
+					<li class="nav-item">
+						<a href="#opinioes" class="nav-link">Opiniões</a>
+					</li>
+					<li class="nav-item">
+						<a href="#contato" class="nav-link">Contato</a>
+					</li>
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item dropdown ">
+						<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="navDrop">
+							Redes Socias
+						</a>
+						<div class="dropdown-menu bg-dark">
+							<a id="#face" class="dropdown-item" href="#">Facebook</a>
+							<a class="dropdown-item " href="#">Instagram</a>
+							<a class="dropdown-item" href="#">Twitter</a>
+						</div>
+					</li>
+				</ul>
+				<form class="form-inline">
+					<input class="form-control mr-2 ml-lg-3" type="search" placeholder="Buscar...">
+					<button class="btn btn-light"><i class="fas fa-search"></i></button>
+				</form>
+			</div>
 		</div>
-	</div>
 	</nav>
 	
-	<!-- inicio do carrossel -->
+	<!-- carrosel indica que é carrossel, slide adiciona o efeito de transicao,
+	data-ride informa para comecar a animacao imediatamente -->
 	<div class="carousel slide" data-ride="carousel" id="carrossel">
-	
-		<!-- inicio marcadores -->
+		<!-- indicadores -->
 		<ol class="carousel-indicators">
 			<li data-target="#carrossel" data-slide-to="0" class="active"></li>
 			<li data-target="#carrossel" data-slide-to="1"></li>
 			<li data-target="#carrossel" data-slide-to="2"></li>
 		</ol>
 	
-		<div class="carousel-inner">
-			<!-- um item do carrossel -->
+		<div class="carousel-inner ">
 			<div class="carousel-item carrossel active">
-				<img class="d-block w-100" src="img/slide01.jpg">
+				<!-- d-block visivek para todos w-100 forca a imagem a ocupar 100% da tela-->
+				<img class="d-block w-100" src="img/slide02.jpg" >
+				<!-- legenda -->
 				<div class="carousel-caption">
 					<h1 class="font-weight-bold">Músicas para todos</h1>
 					<h4>Assine aqui</h4>
 				</div>
-				
 			</div>
-			<!-- mais um item do carrossel -->
+			
 			<div class="carousel-item carrossel">
-				<img class="d-block w-100" src="img/slide02.jpg">
-				
+				<img class="d-block w-100" src="img/slide03.jpg">
 				<div class="carousel-caption">
 					<h1 class="font-weight-bold">Por apenas R$ 9,90/mês.</h1>
 					<h4>Assine aqui</h4>
 				</div>
-				
 			</div>
-			<!-- mais um item do carrossel -->
+			
 			<div class="carousel-item carrossel">
-				<img class="d-block w-100" src="img/slide03.jpg">
-				
+				<img class="d-block w-100" src="img/slide01.jpg">
 				<div class="carousel-caption">
-					<h1 class="font-weight-bold">Os melhores artistas.</h1>
-					<h4>Assine aqui</h4>
+					<h1 class="font-weight-bold">Os melhores artistas</h1>
+					<h4>Ouça agora</h4>
 				</div>
 			</div>
+			
 		</div>
 		
-		<!-- inicio controladores -->
-		
+		<!-- controles de navegacao -->
 		<a class="carousel-control-prev" href="#carrossel" role="button" data-slide="prev">
-			<span class="carousel-control-prev-icon"></span>
-			<span class="sr-only">Anterior</span>
+			<spam class="carousel-control-prev-icon"></spam>
+			<span class="sr-only">Previous</span>
 		</a>
-		
 		<a class="carousel-control-next" href="#carrossel" role="button" data-slide="next">
-			<span class="carousel-control-next-icon"></span>
-			<span class="sr-only">Próximo</span>
+			<spam class="carousel-control-next-icon"></spam>
+			<span class="sr-only">Previous</span>
 		</a>
 		
 	</div>
-	<!-- fim do carrossel -->
+	<!-- fim do carousel -->
+	
+	<!-- carrosel jquery -->
+	<div class="container text-center mt-3">
+		<button onclick="$('#carrossel').carousel('prev')" class="btn btn-secondary">ANTERIOR</button>
+		<button onclick="$('#carrossel').carousel('next')" class="btn btn-secondary">PRÓXIMO</button>
+		<button onclick="$('#carrossel').carousel(0)" class="btn btn-secondary">IR PARA O PRIMEIRO</button>
+	</div>
 	
 	<!-- inicio das imagens -->
-	
 	<div class="container" id="sobre">
 		<div class="row text-center my-5">
 			<div class="col-12">
-				<h1 class="display-4">
-				<i class="fas fa-headphones cor-verde"></i>
-				O que tem no Spotily?</h1>
+				<h1 class="display-4"><i class="fas fa-headphones icon-func mr-3"></i>O que tem no Spotily?</h1>
 			</div>
-		</div>
-		
-		<div class="row text-center my-5">
-			<!-- imagem 01 -->
-			<div class="col-12 col-sm-4">
-				<img class="img-fluid mb-3" src="img/icone01.jpg">
-				<h3>Músicas</h3>
-				<p>O Spotily tem milhões de músicas... qualquer coisa...</p>
-			</div>
-			<!-- imagem 02 -->
-			<div class="col-12 col-sm-4">
-				<img class="img-fluid mb-3 img-thumbnail" src="img/icone02.jpg">
-				<h3>Músicas</h3>
-				<p>O Spotily tem milhões de músicas... qualquer coisa...</p>
-			</div>
-			<!-- imagem 03 -->
-			<div class="col-12 col-sm-4">
-				<img class="img-fluid mb-3 rounded-circle" src="img/icone03.jpg">
-				<h3>Músicas</h3>
-				<p>O Spotily tem milhões de músicas... qualquer coisa...</p>
-			</div>
-		
 		</div>
 	
+		<div class="row text-center my-5">
+			<div class="col-sm-4">
+				<img class="img-fluid mb-3" src="img/icone01.jpg">
+				<h3>Músicas</h3>
+				<p>O Spotily tem milhões de músicas. Escute seus sons favoritos, descubra novas músicas e reúna seus favoritos em um só lugar.</p>
+				
+				<!-- jquery -->
+				<button class="btn btn-sm" onclick="$('#maisinfo').slideToggle();">Saiba mais</button>
+				<button class="btn btn-sm" onclick="$('#maisinfo').slideDown(1000).slideUp(5000);">Saiba mais</button>
+				<div class="border border-primary mt-3 pt-3" id="maisinfo">
+					<h3>Vários artistas nos escolhem</h3>
+					<p>O Spotily tem milhões de músicas. Escute seus sons favoritos.</p>
+				</div>
+				<!-- fim -->
+				
+			</div>
+			<div class="col-sm-4">
+				<img class="img-fluid mb-3 img-thumbnail" src="img/icone02.jpg" data-toggle="popover"  data-placement="top" title="Spotily" data-content="Imagem do aplicativo">
+				<h3>Playlists</h3>
+				<p>No Spotily você encontra uma playlist para cada momento. Todas feitas por fanáticos e especialistas da música.</p>
+			</div>
+			<div class="col-sm-4">
+				<img class="img-fluid mb-3 rounded-circle efeito-imagem " src="img/icone03.jpg">
+				<h3>Novos Lançamentos</h3>
+				<p>Escute os novos lançamentos de singles e álbuns da semana e veja o que está bombando no Top 50.</p>
+			</div>
+		</div>
 	</div>
 	<!-- fim das imagens -->
 	
-	<!-- botao que chama modal -->
-	<div class="jumbotron">
+	<!-- inicio nav pills | jumbotron | embed-->
+	<div class="jumbotron jumbotron-fluid" id="estilos">
+	
 		<div class="container">
-			<div class="row text-center">
+			<div class="row text-center mb-3">
 				<div class="col-12">
-					<h1 class="display-4"> <i class="fas fa-play cor-verde"></i>Assine agora!</h1>
+					<h1 class="display-4"><i class="far fa-play-circle icon-func mr-3"></i>Todos estilos musicais</h1>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-12 text-center mt-3">
-					<!-- botao -->
-					<button style="height:150px;" class="btn btn-lg fundo-verde" data-toggle="modal" data-target="#assmodal">Assine agora</button>
-					<!-- imagem -->
-					<a data-toggle="modal" data-target="#assmodal" href="#"><img src="img/slide02.jpg" height="150px"></a>
-					
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<!-- inicio do conteudo do modal -->
-	<div class="modal fade" id="assmodal" tabindex="-1" role="dialog">
-		<!-- modal-lg : para modal grande -->
-		<!-- modal-dialog-centered : centraliza o modal -->
-		<div class="modal-dialog modal-dialog-centered " role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h1>Assine agora</h1>
-				</div>
-				<div class="modal-body">
-					<p>Não perca tempo...</p>
-					<img src="img/slide02.jpg" class="img-fluid">
-				</div>
-				<div class="modal-footer">
-					<button class="btn fundo-verde"data-dismiss="modal">Fechar</button>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	
-	
-	
-	
-	<!-- inicio do formulario -->
-	<div class="container">
-		<div class="row text-center my-5">
-			<div class="col-12">
-				<h1 class="display-4"><i class="fas fa-comments cor-verde"></i>
-				Nos envie uma mensagem</h1>
-			</div>
-		</div>
 		
-		<div class="row justify-content-center">
-			<div class="col-sm-12 col-md-10">
-				<form>
-					<div class="form-group">
-						<label for="inputemail">E-mail</label>
-						<input class="form-control form-control-lg"type="email" id="inputemail"placeholder="Digite seu email"></input>
-						<small class="form-text text-muted">Nunca iremos compartilhar suas informações.</small>
-					</div>
-				
-				<div class="form-row">
-					<div class="form-group col-6">
-						<label for="inpnome">Nome</label>
-						<input type="text" class="form-control" id="inpnome"placeholder="Digite seu nome..."></input>
-					</div>
-					
-					<div class="form-group col-6">
-						<label for="inpsobre">Sobrenome</label>
-						<input type="text" class="form-control" id="inpsobre"placeholder="Digite seu sobrenome"></input>
-					</div>
-				</div>
-				<!-- select -->
-				<div class="form-group">
-					<label for="selectacao">Escolha sua ação:</label>
-					<select class="form-control" id="selectacao">
-						<option>Sugestão</option>
-						<option>Problema</option>
-						<option>Crítica</option>
-					</select>
-				</div>
-				<!-- text area -->
-				<div class="form-group">
-					<label for="inpmsg">Mensagem</label>
-					<textarea class="form-control"rows="5" id="inpmsg"></textarea>
-				</div>
-				
-				<div class="form-check">
-					<input class="form-check-input"type="checkbox" value="" id="check01"></input>
-					<label class="form-check-label" for="check01">Deseja receber nossas mensagens?</label>
-				</div>
-				
-				<div class="form-check">
-					<input class="form-check-input" type="radio" value="" id="check02"></input>
-					<label class="form-check-label" for="check02" >Deseja receber nossas mensagens?</label>
-				</div>
-				
-				<div class="form-group">
-					<label for="inpemp">Conte um pouco da sua necessidade:</label>
-					<textarea class="form-control"rows="3" id="inpemp"></textarea>
-				</div>
-				
-				<button type="submit" class="btn btn-lg mt-3 fundo-verde">Enviar mensagem</button>
-				
-					
-				</form>
-			</div>
-		</div>
-	</div>
-	<!-- fim do formulario -->
-	
-	<!-- inicio do navpills e jumbotron -->
-	<div class="jumbotron mt-4" id="estilos">
-	<div class="container">
-	
-		<!-- cabeçalho -->
-		<div class="row text-center">
-			<div class="col-12">
-				<h1 class="display-4"><i class="far fa-play-circle cor-verde"></i> Todos estilos musicais</h1>
+			<nav class="nav nav-pills nav-fill">
+					<a class="nav-item nav-link active" data-toggle="pill" role="tab" href="#tab01">Sertanejo</a>
+					<a class="nav-item nav-link" data-toggle="pill" role="tab" href="#tab02">Pagode</a>
+					<a class="nav-item nav-link" data-toggle="pill" role="tab" href="#tab03">MPB</a>
+					<a class="nav-item nav-link" data-toggle="pill" role="tab" href="#tab04">Rock</a>
+			</nav>
 			
-			</div>
-		</div>
-		
-		<!-- inicio navpills -->
-		<nav class="nav nav-pills nav-fill">
-			<a class="nav-item nav-link active" role="tab" href="#tab01" data-toggle="pill" >Sertanejo</a>
-			<a class="nav-item nav-link" role="tab" href="#tab02" data-toggle="pill">Pagode</a>
-			<a class="nav-item nav-link" role="tab" href="#tab03" data-toggle="pill">MBP</a>
-			<a class="nav-item nav-link" role="tab" href="#tab04" data-toggle="pill">Rock</a>
-		</nav>
-		<!-- inicio do conteudo do navpills -->
-		
-		<div class="tab-content">
-			<!-- conteudo botao 01 -->
-			<div class="tab-pane fade show active" id="tab01" role="tabpanel">
-					<div class="row mt-2">
-						<div class="col-sm-12 col-md-6 embed-responsive embed-responsive-16by9">
+			<div class="tab-content mt-4">
+				<div class="tab-pane fade show active" id="tab01" role="tabpanel">
+					<div class="row">
+						<div class="col-md-6 embed-responsive embed-responsive-16by9">
 							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ghFocBG78FA"></iframe>
 						</div>
-						<div class="col-sm-12 col-md-6">
+						<div class="col-md-6">
 							<h3>Jorge e Mateus</h3>
 							<p>Jorge & Mateus é uma dupla de música sertaneja Brasileira, formada pelos cantores goianos Jorge Alves Barcelos e Mateus Pedro Liduário de Oliveira, que já venderam em média 6 milhões de cópias.</p>
 						</div>
 					</div>
 				</div>
-				<!-- conteudo botao 02 -->
 				<div class="tab-pane fade show " id="tab02" role="tabpanel">
-					<div class="row mt-2">
-						<div class="col-sm-12 col-md-6 embed-responsive embed-responsive-16by9">
+					<div class="row">
+						<div class="col-md-6 embed-responsive embed-responsive-16by9">
 							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/aKBwce1ajD0"></iframe>
 						</div>
-						<div class="col-sm-12 col-md-6">
+						<div class="col-md-6">
 							<h3>Zeca Pagodinho</h3>
 							<p>Zeca Pagodinho, nome artístico de Jessé Gomes da Silva Filho, é um cantor e compositor brasileiro. Gravou mais de 20 discos e é considerado um grande nome do gênero samba e pagode.</p>
 						</div>
 					</div>
 				</div>
-				<!-- conteudo botao 03 -->
 				<div class="tab-pane fade show " id="tab03" role="tabpanel">
-					<div class="row mt-2">
-						<div class="col-sm-12 col-md-6 embed-responsive embed-responsive-16by9">
+					<div class="row">
+						<div class="col-md-6 embed-responsive embed-responsive-16by9">
 							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/j9UbE1slI-Q"></iframe>
 						</div>
-						<div class="col-sm-12 col-md-6">
+						<div class="col-md-6">
 							<h3>Caetano Veloso</h3>
 							<p>Caetano Emanuel Viana Teles Veloso é um músico, produtor, arranjador e escritor brasileiro. Com uma carreira que ultrapassa cinco décadas.</p>
 						</div>
 					</div>
 				</div>
-				<!-- conteudo botao 04 -->
 				<div class="tab-pane fade show " id="tab04" role="tabpanel">
-					<div class="row mt-2">
-						<div class="col-sm-12 col-md-6 embed-responsive embed-responsive-16by9">
+					<div class="row">
+						<div class="col-md-6 embed-responsive embed-responsive-16by9">
 							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ghFocBG78FA"></iframe>
 						</div>
-						<div class="col-sm-12 col-md-6">
+						<div class="col-md-6">
 							<h3>Jorge e Mateus</h3>
 							<p>Jorge & Mateus é uma dupla de música sertaneja Brasileira, formada pelos cantores goianos Jorge Alves Barcelos e Mateus Pedro Liduário de Oliveira, que já venderam em média 6 milhões de cópias.</p>
 						</div>
 					</div>
 				</div>
-			
-		
+			</div>
 		</div>
 	</div>
-	</div>
+	<!-- fim nav pills | jumbotron | embed-->
 	
-	<!-- inicio cards -->
-	
+	<!-- inicio cards - opinioes usuarios -->
 	<div class="container" id="opinioes">
-		<div class="row text-center my-5">
+		<div class="row text-center mt-5 mb-3">
 			<div class="col-12">
-				<h1 class="display-4"><i class="fas fa-users cor-verde"></i> Opiniões dos usuários</h1>
+				<h1 class="display-4"><i class="fas fa-users icon-func mr-3"></i>Opiniões dos usuários</h1>
+				
 			</div>
 		</div>
-		<!-- inicio dos cards -->
+
 		<div class="card-columns">
+				<div class="card">
+					<div class="card-body">
+					Este é um texto do conteúdo do card.
+					<a href="#" onclick="$('#carrossel').carousel(2)">IR PARA O SLIDE 2</a>
+					</div>
+				</div>
 			
-			<!-- card 01 -->
-			<div class="card">
-				<div class="card-body">
-					Este texto é um conteudo do card.
+				<div class="card text-white bg-secondary">
+					<div class="card-body">
+						<h5 class="card-title">Ótima plataforma<h5>
+						<h6 class="card-subtitle my-2">Utilizo várias horas por dia.</h6>
+						<p class="card-text">Consigo escutar todos os meus artistas preferidos, além disso consigo descobrir vários artistas diferentes.</p>
+					</div>
+				</div>
+			
+				<div class="card">
+				<img class="card-img-top" src="img/user01.jpg">
+					<div class="card-body">
+						<h5 class="card-title">Ótimo plataforma<h5>
+						<h6 class="card-subtitle my-2">Utilizo várias horas por dia.</h6>
+						<p class="card-text">Consigo escutar todos os meus artistas preferidos, além disso consigo descobrir vários artistas diferentes.</p>
+						<p class="card-text text-muted">Atualizado a 14 min atrás.</p>
+					</div>
+				</div>
+				
+				<div class="card">
+				<img class="card-img-top" src="img/user02.jpg">
+					<div class="card-img-overlay" style="color:#FFF; background-color:rgba(0,155,127,0.7);">
+						<h5 class="card-title" >Ótimo plataforma<h5>
+						<h6 class="card-subtitle my-2" >Utilizo várias horas por dia.</h6>
+						
+					</div>
+				</div>
+		
+				<div class="card">
+					<img class="card-img-top rounded-circle" src="img/user03.jpg">
+					<div class="card-body">
+						<h5 class="card-title">Ótima plataforma<h5>
+						<h6 class="card-subtitle my-2">Utilizo várias horas por dia.</h6>
+						<p class="card-text">Consigo escutar todos os meus artistas preferidos, além disso consigo descobrir vários artistas diferentes.</p>
+					</div>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item">Pop</li>
+						<li class="list-group-item">Rock</li>
+					</ul>
+				</div>
+			
+				<div class="card">
+					<div class="card-header">
+					Destaque
+					</div>
+					<div class="card-body">
+						<h5 class="card-title">Ótimo plataforma<h5>
+						<h6 class="card-subtitle my-2">Utilizo várias horas por dia.</h6>
+						<p class="card-text">Consigo escutar todos os meus artistas preferidos, além disso consigo descobrir vários artistas diferentes.</p>
+					</div>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item">Pop</li>
+						<li class="list-group-item">Rock</li>
+					</ul>
+					<div class="card-body">
+						<a href="#" class="card-link">Site 1</a>
+						<a href="#" class="card-link">Site 2</a>
+					</div>
+					<div class="card-footer text-muted">
+						Rodapé
+					</div>
+				</div>
+	
+				<div class="card border-success">
+					<div class="card-header text-success">Colorido</div>
+					<div class="card-body text-success">
+					Este é um texto do conteúdo do card.
+					</div>
+				</div>
+				
+				<div class="card bg-info text-white">
+					<div class="card-header ">Colorido</div>
+					<div class="card-body">
+					Este é um texto do conteúdo do card.
+					</div>
+				</div>
+		</div>
+	</div>
+	<!-- fim cards - opinioes usuarios -->
+	
+	<!-- inicio formularios -->
+	<div class="container" id="contato">
+		<div class="row text-center mt-5 mb-3">
+			<div class="col-12">
+				<h1 class="display-4"><i class="fas fa-comments icon-func mr-3"></i>Nos envie uma mensagem</h1>
+			</div>
+		</div>
+		
+		<div class="row justify-content-center">
+			<div class="col-sm-12 col-lg-10">
+				<form>
+					<div class="form-group">
+						<label for="inputemail">E-mail:</label>
+						<!-- form-control-lg -->
+						<input type="email" class="form-control form-control-lg" id="inputemail" placeholder="Digite seu email aqui">
+						<small class="form-text text-muted">Nunca iremos compartilhar suas informações.</small>
+					</div>
+					
+					<!-- diferença entre row e form-row -->
+					<div class="form-row">
+						<div class="form-group col-6">
+							<label for="inpnome">Nome</label>
+							<input type="text" class="form-control" id="inpnome" placeholder="Nome">
+						</div>
+						<div class="form-group col-6">
+							<label for="inpsobre">Sobrenome</label>
+							<input type="text" class="form-control" id="inpsobre" placeholder="Sobrenome">
+						</div>
+					</div>
+					
+					<div class="form-group"> 
+						<label for="selectacao">Escolha sua ação:</label>
+						<select class="form-control" id="selectacao">
+							<option>Sugestão</option>
+							<option>Problema</option>
+							<option>Crítica</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="inputmsg">Mensagem:</label>
+						<textarea class="form-control" rows="5" id="inputmsg">
+						</textarea>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" value="" id="check01">
+						<label class="form-check-label" for="check01">Deseja receber nossas mensagens?</input>
+					</div>
+					
+					<div class="form-check mb-2">
+						<input class="form-check-input" type="radio" value="" id="check02">
+						<label class="form-check-label" for="check02">Deseja receber nossas mensagens?</input>
+					</div>
+					<div class="form-group" id="empresa">
+						<label for="inputemp">Conte um pouco da sua necessidade:</label>
+						<textarea class="form-control" rows="3" id="inputemp">
+						</textarea>
+					</div>
+					<button type="button" class="btn btn-lg btn-secondary" onclick="$('#empresa').show(1000);" href="#">Deseja um plano empresarial?</button>
+					<button type="submit" class="btn btn-lg fundo-verde" >Enviar mensagem</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- fim formularios -->
+	
+	<!-- inicio modal -->
+	<div class="jumbotron jumbotronfluid mt-5">
+		<div class="container">
+			<div class="row text-center ">
+				<div class="col-12">
+					<h1 class="display-4"><i class="fas fa-play icon-func mr-3"></i>Assine agora!</h1>
 				</div>
 			</div>
-			<!-- card 02 -->
-			<div class="card">
-				<div class="card-body">
-					<h5 class="card-title">Ótima plataforma</h5>
-					<h6 class="card-subtitle">Utilizo várias vezes ao dia.</h6>
-					<p class="card-text">Consigo escutar todas as minhas músicas</p>
+			<div class="row">
+				<div class="col-12 mt-3 text-center">
+					<button class="btn btn-lg " data-toggle="modal" data-target="#assmodal" style="height:150px;">Assinar</button>
+					<a data-toggle="modal" data-target="#assmodal" href="#"><img src="img/slide01.jpg" height="150px"></a>
+				
+					<button class="btn btn-lg" onclick="$('#assmodal').modal('show')" style="height:150px;">Assine jQuery</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- inicio conteudo modal -->
+	<div class="modal fade" id="assmodal" tabindex="-1" role="dialog">
+		<!-- modal-dialog-centered -->
+		<!-- modal-lg -->
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1>Assine agora</h1>
+				</div>
+				<div class="modal-body">
+					<p>...</p>
+					<img src="img/slide01.jpg" class="img-fluid">
+					<p>Preço por tempo limitado.</p>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- fim modal -->
+	
+	<div class="container text-center">
+		<button id="botao-topo" class="btn btn-lg">Ir para o topo</button>
+		<a tabindex="0" class="btn btn-secondary ml-2" role="button" data-toggle="popover" data-placement="right" data-trigger="focus" title="Entre em contato" data-content="Entre em contato através do e-mail contato@spotily.com.">Ajuda</a>
+	</div>
+	
+	<!-- inicio rodapé list-group btn-group-->
+	<div class="container-fluid bg-dark mt-5" id="rodape">
+		<div class="container text-white">
+			<div class="row">
+				<div class="col-md-5 my-4">
+					<img src="img/logo-spotily.png" height="45px" class="mb-3">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam condimentum diam nec iaculis venenatis. Aliquam ultricies ligula massa, sit amet dictum dui sodales nec.</p>
+					<p>Nam dignissim libero ornare lacus luctus, vitae tempus lacus volutpat. Curabitur ac ipsum tortor.</p>
+				</div>
+				<div class="col-md-4 my-4">
+					<h2>Menu</h2>
+					<div class="list-group" >
+						<a class="list-group-item list-group-item-action" style="background-color:transparent;">Sobre</a>
+						<a class="list-group-item list-group-item-action list-group-item-dark text-dark">Estilos</a>
+						<a class="list-group-item list-group-item-action list-group-item-dark text-dark">Opiniões</a>
+						<a class="list-group-item list-group-item-action list-group-item-dark text-dark">Contato</a>
+					</div>
+				</div>
+				<div class="col-md-3 my-4">
+					<div class="btn-group btn-group-lg btn-group-justified d-flex justify-content-md-end" role="group">
+						<button class="btn btn-outline-primary"><i class="fab fa-facebook "></i></button>
+						<button class="btn btn-outline-warning"><i class="fab fa-instagram "></i></button>
+						<button class="btn btn-outline-info"><i class="fab fa-twitter-square "></i></button>
+					</div>
 				</div>
 			</div>
 			
 		</div>
 	</div>
-	
+  
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
